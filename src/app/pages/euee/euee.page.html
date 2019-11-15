@@ -1,0 +1,59 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>EUEE
+    </ion-title>
+
+  </ion-toolbar>
+
+</ion-header>
+
+<ion-content>
+
+  <!-- <ion-list> -->
+
+    <ion-card class="welcome-card" *ngFor="let item of items let i=index" >
+      <!-- <ion-img src="/assets/shapes.svg"></ion-img> -->
+      <ion-card-header>
+        <ion-card-title>{{ item. id}} </ion-card-title>
+
+        <ion-card-title>{{ item.question}}</ion-card-title>
+      </ion-card-header>
+
+      <ion-card-content>
+        <ion-list lines="none">
+        <ion-radio-group   (ionSelect)="checkAnswer($event, item.id)"  >
+        <ion-row>
+          <ion-item id="1">
+          <ion-radio value="A"></ion-radio>
+          <ion-label> &nbsp;{{item.A}}</ion-label>
+        </ion-item>
+      </ion-row>
+      <ion-row id="2" >
+        <ion-item>
+          <ion-radio value="B"></ion-radio>
+          <ion-label>&nbsp;{{item.B}}</ion-label>
+        </ion-item>
+        </ion-row>
+        <ion-row id="3" >
+        <ion-item>
+          <ion-radio value="C"></ion-radio>
+          <ion-label>&nbsp;{{item.C}}</ion-label>
+        </ion-item>
+          </ion-row>
+          <ion-row id="4" >
+        <ion-item>
+          <ion-radio value="D"></ion-radio>
+          <ion-label>&nbsp;{{item.D}}</ion-label>
+        </ion-item>
+        </ion-row>
+        </ion-radio-group>
+        </ion-list>
+      </ion-card-content>
+  <!-- <p id="eDpandWrapper" class="expand-wrapper" [class.collapsed]="!p.Expanded"> fgdfdfgd</p> -->
+      </ion-card>
+    <!-- </ion-list> -->
+
+      <!-- <ion-fab-button  (click)="checkAnswer($event)"><ion-icon name="right"></ion-icon> </ion-fab-button> -->
+
+
+</ion-content>

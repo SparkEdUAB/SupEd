@@ -1,0 +1,33 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>My Favorite</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card *ngFor="let item of items" >
+    <ion-item>
+      <!-- <ion-icon name="play" slot="start"></ion-icon> -->
+      <ion-img style="height:140px;width:140px" src="./assets/imgs/grade10.png" ></ion-img>&nbsp;
+      <ion-label (click)="changeVideo(item.src)">  Epsode {{ item.episode}} {{ item.title }}</ion-label>
+      <!-- <div *ngIf="favorites.indexOf(item.id) == '-1'; then fav else remove"> </div> -->
+
+      <ion-button  slot="end" (click)="removeFavorite(item.id)"><ion-icon name="trash"></ion-icon></ion-button>
+
+      <!-- <ng-template #fav>
+      <ion-button fill="outline" slot="end" (click)="favorite(item.id)"><ion-icon name="heart-empty"></ion-icon></ion-button>
+      </ng-template> -->
+
+    </ion-item>
+
+
+    <!-- <ion-card-content>
+      This is content, without any paragraph or header tags,
+      within an ion-card-content element.
+    </ion-card-content> -->
+  </ion-card>
+
+</ion-content>

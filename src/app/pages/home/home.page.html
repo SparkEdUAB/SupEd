@@ -1,0 +1,126 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>
+      Home
+    </ion-title>
+  </ion-toolbar>
+  <ion-searchbar  color="primary"[(ngModel)]="searchTerm" (ionInput)="setFilteredItems()"></ion-searchbar>
+
+</ion-header>
+
+<ion-content>
+  <ion-card *ngFor="let item of items" >
+    <ion-item>
+      <!-- <ion-icon name="play" slot="start"></ion-icon> -->
+      <ion-img style="height:140px;width:140px" src="./assets/imgs/grade10.png" ></ion-img>&nbsp;
+      <ion-label (click)="changeVideo(item.src)">  Epsode {{ item.episode}} {{ item.title }}</ion-label>
+      <!-- <div *ngIf="favorites.indexOf(item.id) == '-1'; then fav else remove"> </div>
+      <ng-template #remove>
+      <ion-button fill="outline" slot="end" (click)="removeFavorite(item.id)"><ion-icon name="heart"></ion-icon></ion-button>
+      </ng-template>
+      <ng-template #fav>
+      <ion-button fill="outline" slot="end" (click)="favorite(item.id)"><ion-icon name="heart-empty"></ion-icon></ion-button>
+      </ng-template> -->
+
+    </ion-item>
+
+
+    <!-- <ion-card-content>
+      This is content, without any paragraph or header tags,
+      within an ion-card-content element.
+    </ion-card-content> -->
+  </ion-card>
+  <ion-card>
+  <ion-slides pager="true" auto>
+    <ion-slide>
+      <ion-img src="./assets/imgs/header.jpg"></ion-img>
+    </ion-slide>
+    <ion-slide>
+      <ion-img src="./assets/imgs/header1.jpg"></ion-img>
+
+    </ion-slide>
+    <!-- <ion-slide>
+      <ion-img src="./assets/imgs/header2.jpg"></ion-img>
+
+    </ion-slide> -->
+  </ion-slides>
+</ion-card>
+  <!-- <mat-form-field>
+  <input matInput [matDatepicker]="picker" placeholder="Choose a date">
+  <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+  <mat-datepicker #picker></mat-datepicker>
+</mat-form-field> -->
+
+<ion-grid>
+<ion-row>
+  <ion-col>
+      <ion-card (click)="gradeNine('Grade Nine')">
+        <ion-img src="./assets/imgs/grade9.png"></ion-img>
+  <ion-card-header>
+    <ion-card-title>Grade 9</ion-card-title>
+  </ion-card-header>
+</ion-card>
+  </ion-col>
+  <ion-col>
+      <ion-card>
+        <ion-img src="./assets/imgs/grade10.png"></ion-img>
+  <ion-card-header>
+    <ion-card-title>Grade 10</ion-card-title>
+  </ion-card-header>
+</ion-card>
+  </ion-col>
+
+</ion-row>
+<ion-row>
+  <ion-col>
+      <ion-card>
+        <ion-img src="./assets/imgs/grade11.png"></ion-img>
+  <ion-card-header>
+    <ion-card-title>Grade 11</ion-card-title>
+  </ion-card-header>
+</ion-card>
+  </ion-col>
+  <ion-col>
+      <ion-card>
+        <ion-img src="./assets/imgs/grade12.png"></ion-img>
+  <ion-card-header>
+    <ion-card-title>Grade 12</ion-card-title>
+  </ion-card-header>
+</ion-card>
+  </ion-col>
+
+</ion-row>
+</ion-grid>
+
+
+    <!-- <ion-list lines="none">
+      <ion-list-header>
+        <ion-label>Resources</ion-label>
+      </ion-list-header>
+      <ion-item (click)="gradeNine('Grade Nine')">
+        <ion-icon slot="start" color="medium" name="book"></ion-icon>
+        <ion-label>Ionic Documentation</ion-label>
+      </ion-item>
+      <ion-item href="https://ionicframework.com/docs/building/scaffolding">
+        <ion-icon slot="start" color="medium" name="build"></ion-icon>
+        <ion-label>Scaffold Out Your App</ion-label>
+      </ion-item>
+      <ion-item href="https://ionicframework.com/docs/layout/structure">
+        <ion-icon slot="start" color="medium" name="grid"></ion-icon>
+        <ion-label>Change Your App Layout</ion-label>
+      </ion-item>
+      <ion-item href="https://ionicframework.com/docs/theming/basics">
+        <ion-icon slot="start" color="medium" name="color-fill"></ion-icon>
+        <ion-label>Theme Your App</ion-label>
+      </ion-item>
+    </ion-list> -->
+
+</ion-content>
+<!-- <ion-footer >
+<ion-toolbar color="primary">
+  <ion-title>Footer</ion-title>
+</ion-toolbar>
+</ion-footer> -->
